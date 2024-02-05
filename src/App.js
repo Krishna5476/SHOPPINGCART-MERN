@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Cart from "./components/Cart";
+import home from "./components/home";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/cart" Component={Cart}></Route>
+          <Route path="/not-found" Component={NotFound}></Route>
+          <Route path="/" Component={home}></Route>
+          {/* if wrong url is entered than the NAVIGATE is used to direct the page to the not found */}
+          <Route path="*" element={<Navigate to="/not-found" />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
