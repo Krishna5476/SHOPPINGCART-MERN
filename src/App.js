@@ -12,9 +12,9 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/cart" Component={Cart}></Route>
+          <Route path="/cart" exact Component={Cart}></Route>
           <Route path="/not-found" Component={NotFound}></Route>
-          <Route path="/" Component={home}></Route>
+          <Route path="/" exact Component={home}></Route>
           {/* if wrong url is entered than the NAVIGATE is used to direct the page to the not found */}
           <Route path="*" element={<Navigate to="/not-found" />} />
         </Routes>
