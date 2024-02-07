@@ -4,7 +4,10 @@
   box-sizing: border-box;
 }
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap");
-
+.App {
+  height: 500px;
+  width: auto;
+}
 /* Nav bar */
 .nav-bar {
   height: 70px;
@@ -68,7 +71,19 @@
 
 .products {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
   margin-top: 2rem;
+}
+
+product {
+  width: 250px;
+  max-width: 100%;
+  height: 400px;
+}
+.product img {
+  width: 90%;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
