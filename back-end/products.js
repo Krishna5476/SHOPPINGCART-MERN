@@ -1,12 +1,13 @@
 const products = [
   {
     id: 1,
-    name: "iphone 12 pro",
-    desc: "6-inch display",
-    price: 999,
+    name: "iphone 8 pro",
+    desc: "9-inch display",
+    price: 99,
     image:
-      "https://res.cloudinary.com/dfcsq55yo/image/upload/v1697575567/cart/iPhone-14-Review-Gear_tabsjf.jpg",
+      "https://res.cloudinary.com/dfcsq55yo/image/upload/v1697575509/cart/refurb-iphone-13-pro-max-graphite-2023_d3vhyk.jpg",
   },
+
   {
     id: 2,
     name: "iphone 13 pro",
