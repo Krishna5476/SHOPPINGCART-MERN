@@ -5,7 +5,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import productsReducer, { productsFetch } from "./features/productSlice";
 import { productsApi } from "./features/productsApi";
-import cartReducer from "./features/cartSlice";
+import cartReducer, { getTotal } from "./features/cartSlice";
 const store = configureStore({
   reducer: {
     products: productsReducer,
@@ -18,6 +18,7 @@ const store = configureStore({
   },
 });
 store.dispatch(productsFetch());
+store.dispatch(getTotal());
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
