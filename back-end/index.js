@@ -22,6 +22,11 @@ app.get("/products", (req, res) => {
 
 const port = process.env.PORT || 5000;
 
+const uri = process.env.DB_URI;
+
 app.listen(port, console.log(`server running on ${port}`));
 
-mongoose.connect("");
+mongoose
+  .connect(uri)
+  .then(() => console.log("mongodb connection successfull..."))
+  .catch((err) => console.log("mongo connection failed", err.message));
