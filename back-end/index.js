@@ -7,11 +7,14 @@ const app = express();
 // By using app.use(express.json());, you are telling your Express application to use the express.json() middleware for every incoming request. This is common when dealing with APIs that expect JSON data in the request body, as it allows you to conveniently access that data in a structured manner.
 const mongoose = require("mongoose");
 
+const register = require("./routes/register");
+
 // accessing the module products
 require("dotenv").config();
 const products = require("./products");
 app.use(express.json());
 app.use(cors());
+app.use("/api/register", register);
 
 app.get("/", (req, res) => {
   res.send("welcome");
