@@ -12,6 +12,7 @@ const register = require("./routes/register");
 // accessing the module products
 require("dotenv").config();
 const products = require("./products");
+// const router = require("./routes/register");
 app.use(express.json());
 app.use(cors());
 app.use("/api/register", register);
